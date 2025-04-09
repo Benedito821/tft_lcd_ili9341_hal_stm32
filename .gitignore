@@ -1,0 +1,7 @@
+/Debug
+*.launch
+*.o
+/.settings
+*.exe
+main_old.c
+/docs
