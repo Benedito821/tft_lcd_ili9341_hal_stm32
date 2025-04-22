@@ -115,11 +115,6 @@ typedef struct {
 extern TM_FontDef_t TM_Font_7x10;
 
 /**
- * @brief  11 x 18 pixels font size structure 
- */
-extern TM_FontDef_t TM_Font_11x18;
-
-/**
  * @brief  16 x 26 pixels font size structure 
  */
 extern TM_FontDef_t TM_Font_16x26;
@@ -127,7 +122,13 @@ extern TM_FontDef_t TM_Font_16x26;
 /**
  * @}
  */
- 
+extern TM_FontDef_t TM_FontCalibri_7x10;
+
+extern TM_FontDef_t TM_FontCalibri_16x26;
+
+extern TM_FontDef_t TM_FontCalibri_11x18;
+
+extern TM_FontDef_t TM_Font11x18_Cyrillic;
 /**
  * @defgroup TM_FONTS_Functions
  * @brief    Library functions

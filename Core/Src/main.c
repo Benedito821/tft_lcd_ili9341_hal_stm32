@@ -141,9 +141,9 @@ int main(void)
   draw_SND_logo(20,250,170,ILI9341_COLOR_BLUE2);
 
   draw_SND_logo(40,160,120,ILI9341_COLOR_BLUE2);
-  //Put string with black foreground color and blue background with 11x18px font
-  TM_ILI9341_Puts(125, 95, "Hello", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-  TM_ILI9341_Puts(130, 118, "Geek", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+
+  TM_ILI9341_Puts(125, 95, "Hello", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+  TM_ILI9341_Puts(130, 118, "Geek", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
   ILI9341_draw_filled_triangle(11, 119,47, 100,47, 137,ILI9341_COLOR_GREEN);
   ILI9341_draw_filled_triangle(272, 100,272, 137,308, 119,ILI9341_COLOR_GREEN);
@@ -188,29 +188,29 @@ int main(void)
 	  			  {
 	  				  current_screen = MEASUREMENTS;
 
-	  				  TM_ILI9341_Puts(125, 95, "Hello", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-	  				  TM_ILI9341_Puts(130, 118, "Geek", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(125, 95, "Hello", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(130, 118, "Geek", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
-	  				  TM_ILI9341_Puts(20, 5, "Procs Parameters", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-	  				  TM_ILI9341_Puts(80, 50, "F objc: 500kN\nR objc: 20 cm\nC objc: 24 mF", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_WHITE), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(20, 5, "Procs Parameters", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(80, 50, "F objc: 500kN\nR objc: 20 cm\nC objc: 24 mF", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_WHITE), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
 	  			  }
 	  			  else if(current_screen == MEASUREMENTS )
 	  			  {
 	  				  current_screen = CYCLE_INFO;
-	  				  TM_ILI9341_Puts(20, 5, "Procs Parameters", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-	  				  TM_ILI9341_Puts(80, 50, "F objc: 500kN\nR objc: 20 cm\nC objc: 24 mF", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(20, 5, "Procs Parameters", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(80, 50, "F objc: 500kN\nR objc: 20 cm\nC objc: 24 mF", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
-	  				  TM_ILI9341_Puts(20, 5, " Cycle Parameters", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-	  				  TM_ILI9341_Puts(80, 40,"Cycle state", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(20, 5, " Cycle Parameters", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(80, 40,"Cycle state", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 	  				  TM_ILI9341_DrawRectangle(80, 62, 200, 126, num_swap_16b(ILI9341_COLOR_GREEN));
-	  				  TM_ILI9341_Puts(83, 67, "0-1s init\n10  objc\nSilver", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_WHITE), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(83, 67, "0-1s init\n10  objc\nSilver", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_WHITE), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
-					  TM_ILI9341_Puts(83, 130, "Cycle Time: ", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					  TM_ILI9341_Puts(83, 130, "Cycle Time: ", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 	  				  TM_ILI9341_DrawRectangle(83, 152, 230, 168, num_swap_16b(ILI9341_COLOR_GREEN));
 	  				  TM_ILI9341_DrawFilledRectangle(83, 152, 100, 168, num_swap_16b(ILI9341_COLOR_GREEN));
 
-	  				  TM_ILI9341_Puts(83, 170, "Procs Time: ", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(83, 170, "Procs Time: ", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 	  				  TM_ILI9341_DrawRectangle(83, 190, 230, 206, num_swap_16b(ILI9341_COLOR_GREEN));
 	  				  TM_ILI9341_DrawFilledRectangle(83, 190, 200, 206, num_swap_16b(ILI9341_COLOR_GREEN));
 
@@ -218,21 +218,21 @@ int main(void)
 	  			  else if(current_screen == CYCLE_INFO )
 	  			  {
 	  				 current_screen = MAIN;
-	  				 TM_ILI9341_Puts(20, 5, " Cycle Parameters", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-					 TM_ILI9341_Puts(80, 40,"Cycle state", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				 TM_ILI9341_Puts(20, 5, " Cycle Parameters", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(80, 40,"Cycle state", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 					 TM_ILI9341_DrawRectangle(80, 62, 200, 126, num_swap_16b(ILI9341_COLOR_BLUE2));
-	  				  TM_ILI9341_Puts(83, 67, "0-1s init\n10  objc\nSilver", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(83, 67, "0-1s init\n10  objc\nSilver", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
-					  TM_ILI9341_Puts(83, 130, "Cycle Time: ", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					  TM_ILI9341_Puts(83, 130, "Cycle Time: ", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 	  				  TM_ILI9341_DrawRectangle(83, 152, 230, 168, num_swap_16b(ILI9341_COLOR_BLUE2));
 	  				  TM_ILI9341_DrawFilledRectangle(83, 152, 100, 168, num_swap_16b(ILI9341_COLOR_BLUE2));
 
-	  				  TM_ILI9341_Puts(83, 170, "Procs Time: ", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(83, 170, "Procs Time: ", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 	  				  TM_ILI9341_DrawRectangle(83, 190, 230, 206, num_swap_16b(ILI9341_COLOR_BLUE2));
 	  				  TM_ILI9341_DrawFilledRectangle(83, 190, 200, 206, num_swap_16b(ILI9341_COLOR_BLUE2));
 
-	  				  TM_ILI9341_Puts(125, 95, "Hello", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-	  				  TM_ILI9341_Puts(130, 118, "Geek", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(125, 95, "Hello", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(130, 118, "Geek", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
 	  			  }
 
@@ -242,19 +242,19 @@ int main(void)
 	  			  if(current_screen == MAIN)
 	  			  {
 	  				 current_screen = CYCLE_INFO;
-	  				 TM_ILI9341_Puts(125, 95, "Hello", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-	  				 TM_ILI9341_Puts(130, 118, "Geek", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				 TM_ILI9341_Puts(125, 95, "Hello", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				 TM_ILI9341_Puts(130, 118, "Geek", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
-					 TM_ILI9341_Puts(20, 5, " Cycle Parameters", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-					 TM_ILI9341_Puts(80, 40,"Cycle state", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(20, 5, " Cycle Parameters", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(80, 40,"Cycle state", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 					 TM_ILI9341_DrawRectangle(80, 62, 200, 126, num_swap_16b(ILI9341_COLOR_GREEN));
-					 TM_ILI9341_Puts(83, 67, "0-1s init\n10  objc\nSilver", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_WHITE), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(83, 67, "0-1s init\n10  objc\nSilver", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_WHITE), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
-					 TM_ILI9341_Puts(83, 130, "Cycle Time: ", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(83, 130, "Cycle Time: ", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 					  TM_ILI9341_DrawRectangle(83, 152, 230, 168, num_swap_16b(ILI9341_COLOR_GREEN));
 					  TM_ILI9341_DrawFilledRectangle(83, 152, 100, 168, num_swap_16b(ILI9341_COLOR_GREEN));
 
-					  TM_ILI9341_Puts(83, 170, "Procs Time: ", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					  TM_ILI9341_Puts(83, 170, "Procs Time: ", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 					  TM_ILI9341_DrawRectangle(83, 190, 230, 206, num_swap_16b(ILI9341_COLOR_GREEN));
 					  TM_ILI9341_DrawFilledRectangle(83, 190, 200, 206, num_swap_16b(ILI9341_COLOR_GREEN));
 
@@ -263,21 +263,21 @@ int main(void)
 	  			  {
 	  				current_screen = MEASUREMENTS;
 
-	  				 TM_ILI9341_Puts(20, 5, " Cycle Parameters", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-					 TM_ILI9341_Puts(80, 40,"Cycle state", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				 TM_ILI9341_Puts(20, 5, " Cycle Parameters", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(80, 40,"Cycle state", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 					 TM_ILI9341_DrawRectangle(80, 62, 200, 126, num_swap_16b(ILI9341_COLOR_BLUE2));
-					 TM_ILI9341_Puts(83, 67, "0-1s init\n10  objc\nSilver", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(83, 67, "0-1s init\n10  objc\nSilver", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
-					 TM_ILI9341_Puts(83, 130, "Cycle Time: ", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(83, 130, "Cycle Time: ", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 					  TM_ILI9341_DrawRectangle(83, 152, 230, 168, num_swap_16b(ILI9341_COLOR_BLUE2));
 					  TM_ILI9341_DrawFilledRectangle(83, 152, 100, 168, num_swap_16b(ILI9341_COLOR_BLUE2));
 
-					  TM_ILI9341_Puts(83, 170, "Cycle Time: ", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					  TM_ILI9341_Puts(83, 170, "Cycle Time: ", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 					  TM_ILI9341_DrawRectangle(83, 190, 230, 206, num_swap_16b(ILI9341_COLOR_BLUE2));
 					  TM_ILI9341_DrawFilledRectangle(83, 190, 200, 206, num_swap_16b(ILI9341_COLOR_BLUE2));
 
-					 TM_ILI9341_Puts(20, 5, "Procs Parameters", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-	  				  TM_ILI9341_Puts(80, 50, "F objc: 500kN\nR objc: 20 cm\nC objc: 24 mF", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_WHITE), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					 TM_ILI9341_Puts(20, 5, "Procs Parameters", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(80, 50, "F objc: 500kN\nR objc: 20 cm\nC objc: 24 mF", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_WHITE), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
 
 
@@ -285,11 +285,11 @@ int main(void)
 	  			  else if(current_screen == MEASUREMENTS)
 	  			  {
 	  				  current_screen = MAIN;
-	  				  TM_ILI9341_Puts(20, 5, "Procs Parameters", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-	  				  TM_ILI9341_Puts(80, 50, "F objc: 500kN\nR objc: 20 cm\nC objc: 24 mF", &TM_Font_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(20, 5, "Procs Parameters", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(80, 50, "F objc: 500kN\nR objc: 20 cm\nC objc: 24 mF", &TM_FontCalibri_11x18, num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
-	  				  TM_ILI9341_Puts(125, 95, "Hello", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
-					  TM_ILI9341_Puts(130, 118, "Geek", &TM_Font_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+	  				  TM_ILI9341_Puts(125, 95, "Hello", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
+					  TM_ILI9341_Puts(130, 118, "Geek", &TM_FontCalibri_16x26, num_swap_16b((uint16_t)ILI9341_COLOR_GREEN), num_swap_16b((uint16_t)ILI9341_COLOR_BLUE2));
 
 	  			  }
 

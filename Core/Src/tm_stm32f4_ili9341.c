@@ -390,7 +390,9 @@ void TM_ILI9341_Puts(uint16_t x, uint16_t y, char *str, TM_FontDef_t *font, uint
 		}
 		
 		/* Put character to LCD */
-		TM_ILI9341_Putc(ILI9341_x, ILI9341_y, *str++, font, foreground, background);
+		if(*str != 0xD0 && *str != 0xD1) //get rid of UTF-8 extra byte
+			TM_ILI9341_Putc(ILI9341_x, ILI9341_y, *str, font, foreground, background);
+		str++;
 	}
 }
 
@@ -419,14 +421,21 @@ void TM_ILI9341_Putc(uint16_t x, uint16_t y, char c, TM_FontDef_t *font, uint32_
 	TM_ILI9341_INT_Fill(ILI9341_x, ILI9341_y, ILI9341_x + font->FontWidth, ILI9341_y + font->FontHeight, background);
 	
 	/* Draw font data */
-	for (i = 0; i < font->FontHeight; i++) {
-		b = font->data[(c - 32) * font->FontHeight + i];
-		for (j = 0; j < font->FontWidth; j++) {
-			if ((b << j) & 0x8000) {
-				TM_ILI9341_DrawPixel(ILI9341_x + j, (ILI9341_y + i), foreground);
+		for (i = 0; i < font->FontHeight; i++) {
+			if(c>= 0x20 && c<=0x7E)
+				b = font->data[(c - 32) * font->FontHeight + i];
+			else if(c>=144 && c<192)
+				b = font->data[(c -144+95) * font->FontHeight + i];
+			else if(c>=128 && c<=143)
+				b = font->data[(c - 80+95) * font->FontHeight + i];
+			else
+				continue;
+			for (j = 0; j < font->FontWidth; j++) {
+				if ((b << j) & 0x8000) {
+					TM_ILI9341_DrawPixel(ILI9341_x + j, (ILI9341_y + i), foreground);
+				}
 			}
 		}
-	}
 	
 	/* Set new pointer */
 	ILI9341_x += font->FontWidth;
